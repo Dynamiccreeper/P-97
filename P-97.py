@@ -1,19 +1,24 @@
+9
 import random
-    number=random.Randint(0,9)
 
-    count =5
-    while (count>=0):
-        print(count)
-        count=count-1
-    if(guess == number):
-        print("Congratulation YOU WIN!")
+print("Number guessing game")
+
+number = random.randint(1, 9)
+
+chances = 0
+
+print("Guess a number (between 1 and 9):")
+
+while chances < 5:
+
+    guess = int(input("Enter your guess:- "))
+
+    if guess == number:
+        print("Congratulation YOU WON!!!")
         break
-    if not chances <5:
-      print("You Lose !!! the Number is ", number)  
-    print("Number guessing game")
-    print("Guess a number (between 1 to 9)")
-    guess=input("Enter your guess:-")
 
+    chances += 1
 
-
+if not chances < 5:
+    print("YOU LOSE!!! The number is", number)
 
